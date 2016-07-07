@@ -9,69 +9,68 @@
 @import url(http://fonts.googleapis.com/css?family=roboto);
 
 body {
-  background: #212121;
-  font-size: 22px;
-  line-height: 32px;
-  color: #ffffff;
+  height: 3525px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  overflow: visible;
+  position: absolute;
+}
+
+.wrapper {
+  height: 3525px;
+  width: 100%;
+  position: absolute; 
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: visible;
+} 
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 555px;
+  width: 100%;
+  overflow: hidden;
+}
+  
+.menuwrap {
+  background-color: black;
+  opacity: .7;
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  top: 500px;
   margin: 0;
-  padding: 0;
-  word-wrap: break-word !important;
-  font-family: 'roboto', sans-serif;
+  z-index: 1000;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 60px;
-  text-align: center;
-  color: #FFF;
+.littleme {
+  position: absolute;
+  display: none;
 }
 
-h3 {
-  font-size: 30px;
-  line-height: 34px;
-  text-align: center;
-  color: #FFF;
-}
-
-h3 a { color: #FFF; }
-
-a { color: #FFF; }
-
-h1 {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 60px;
-  line-height: 70px;
-  font-family: 'roboto', sans-serif;
-}
-
-
-
-p { text-align: center; }
+.menuwrap p { text-align: center; }
  .toggle, [id^=drop] {
  display: none;
 }
 
-nav {
+.littleme {
   margin: 0;
   padding: 0;
   background-color: #254441;
 }
 
-#logo {
-  display: block;
-  padding: 0 30px;
-  float: left;
-  font-size: 20px;
-  line-height: 60px;
-}
-
-nav:after {
+.littleme:after {
   content: "";
   display: table;
   clear: both;
 }
 
-nav ul {
+.littleme ul {
   float: right;
   padding: 0;
   margin: 0;
@@ -79,14 +78,14 @@ nav ul {
   position: relative;
 }
 
-nav ul li {
+.littleme ul li {
   margin: 0px;
   display: inline-block;
   float: left;
   background-color: #254441;
 }
 
-nav a {
+.littleme a {
   display: block;
   padding: 0 20px;
   color: #FFF;
@@ -95,112 +94,299 @@ nav a {
   text-decoration: none;
 }
 
-nav ul li ul li:hover { background: blue; }
+.littleme ul li ul li:hover { background: blue; }
 
-nav a:hover { background-color: red; }
+.littleme a:hover { background-color: red; }
 
-nav ul ul {
+.littleme ul ul {
   display: none;
   position: absolute;
   top: 60px;
 }
 
-nav ul li:hover > ul { display: inherit; }
+.littleme ul li:hover > ul { display: inherit; }
 
-nav ul ul li {
+.littleme ul ul li {
   width: 170px;
   float: none;
   display: list-item;
   position: relative;
 }
 
-nav ul ul ul li {
+.littleme ul ul ul li {
   position: relative;
   top: -60px;
   left: 170px;
 }
 
-li > a:after { content: ' +'; }
+.littleme li > a:after { content: ' +'; }
 
-li > a:only-child:after { content: ''; }
+.littleme li > a:only-child:after { content: ''; }
 
-
-/* Media Queries
---------------------------------------------- */
-
-@media all and (max-width : 768px) {
-
-#logo {
-  display: block;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  float: none;
+.fixed {
+  top: 0;
+  position: fixed;
+  opacity: .82;
 }
 
-nav { margin: 0; }
+#alm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 55px;
+  z-index: 1000;
+  overflow: hidden;
+}
 
-.toggle + a,
- .menu { display: none; }
+#alm2 {
+  height: 55px;
+  width: 90px;
+}
 
-.toggle {
-  display: block;
-  background-color: #254441;
-  padding: 0 20px;
-  color: #FFF;
-  font-size: 20px;
-  line-height: 60px;
+h4 {
+  position: absolute;
+  display: none;
+  right: 4px;
+  top: -5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 5;
+  color: #FFFFFF;
   text-decoration: none;
-  border: none;
 }
 
-.toggle:hover { background-color: blue; }
-
-[id^=drop]:checked + ul { display: block; }
-
-nav ul li {
-  display: block;
-  width: 100%;
+h5 {
+  position: absolute;
+  display: none;
+  right: 4px;
+  top: 22px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 5;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
-nav ul ul .toggle,
- nav ul ul a { padding: 0 40px; }
-
-nav ul ul ul a { padding: 0 80px; }
-
-nav a:hover,
- nav ul ul ul a { background-color: red; }
-
-nav ul li ul li .toggle,
- nav ul ul a { background-color: #212121; }
-
-nav ul ul {
-  float: none;
-  position: static;
-  color: #ffffff;
+h6 {
+  position: absolute;
+  display: none;
+  right: 4px;
+  top: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 5;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
-nav ul ul li:hover > ul,
-nav ul li:hover > ul { display: none; }
-
-nav ul ul li {
-  display: block;
-  width: 100%;
+hr {
+  color: #808080;
+  background-color: #808080;
+  width: 80%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  text-align: center;
 }
 
-nav ul ul ul li { position: static;
-
-}
-}
-
-@media all and (max-width : 330px) {
-
-nav ul li {
-  display: block;
-  width: 94%;
+#lineone {
+  position: absolute;
+  top: 720px;
+  text-align: center;
 }
 
+.texts {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  top: 0px;
+  bottom: 0;
+  z-index: 1000;
+  outline: none;
 }
+
+.texts li {
+  display: inline-block;
+  position: relative;
+  outline: none;
+}
+
+.texts a {
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  transition: .5s;
+  font-weight: 5;
+  text-decoration: none;
+  padding: 20px 30px 23px;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+.container a:hover {
+  text-decoration: none;
+}
+
+.texts a:hover:not(#log) {
+  background-color: black;
+  opacity: .9;
+  color: #008080;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+
+
+
+
+
+/*for small screens now*/
+@media all and (max-width: 500px) {
+  body {
+    background-color: #f7f7f7;
+    overflow: visible;
+    height: 3800px;
+    top: 0;
+  }
+
+  .wrapper {
+    top: 0;
+    height: 3800px;
+    width: 100%;
+  }
+  
+  .top {
+    position: absolute;
+    height: 200px;
+    top: 0;
+  }
+  
+  .menuwrap {
+    position: absolute;
+    width: 100%;
+    overflow: visible;
+    left: 0;
+    right: 0;
+    opacity: .82;
+    top: 200px;
+    height: 50px;
+  }
+  
+  .fixed {
+    position: fixed;
+    top: 0;
+    opacity: .82;
+    z-index: 6000;
+  }
+    
+  #alm {
+    position: absolute;
+    height: 50px;
+    top: 0;
+    left: 0;
+  }
+  
+  #alm2 {
+    height: 50px;
+    width: 90px;
+  }
+  
+  #we {
+    position: absolute;
+    display: none;
+  }
+  
+  #numbers {
+    position: absolute;
+    text-align: center;
+    top: 810px;
+    left: 0;
+    right: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #000000;
+  }
+  
+  .logo {
+    position: absolute;
+    display: none;
+  }
+  
+  .texts {
+    position: absolute;
+    display: none;
+  }
+  
+  .littleme {
+    display: initial;
+    position: absolute;
+    z-index: 5000;
+    right: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+  .littleme { margin: 0; }
+
+  .toggle + a,
+   #othermenu { display: none; }
+
+  .toggle {
+    display: block;
+    overflow: visible;
+    background-color: red;
+    padding: 0 20px;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 60px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .toggle:hover { background-color: black; }
+
+  .littleme [id^=drop]:checked + ul { 
+    display: block; 
+  }
+
+  .littleme ul li {
+    display: block;
+    width: 100%;
+  }
+
+  .littleme ul ul .toggle,
+   .littleme ul ul a { padding: 0 40px; }
+
+  .littleme ul ul ul a { padding: 0 80px; }
+
+  .littleme a:hover,
+   .littleme ul ul ul a { background-color: black; }
+
+  .littleme ul li ul li .toggle,
+   .littleme ul ul a { background-color: #212121; }
+
+  .littleme ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+  }
+
+  .littleme ul ul li:hover > ul,
+  .littleme ul li:hover > ul { display: none; }
+
+  .littleme ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  .littleme ul ul ul li { 
+    position: static;
+  }
+}
+
 </style>
 </head>
 
@@ -211,58 +397,15 @@ nav ul li {
   <input type="checkbox" id="drop" />
   <ul class="menu">
     <li><a href="#">Home</a></li>
-    <li> 
-      <!-- First Tier Drop Down -->
-      <label for="drop-1" class="toggle">Service +</label>
-      <a href="#">Service</a>
-      <input type="checkbox" id="drop-1"/>
-      <ul>
-        <li><a href="#">Service 1</a></li>
-        <li><a href="#">Service 2</a></li>
-        <li><a href="#">Service 3</a></li>
-      </ul>
-    </li>
-    <li> 
-      
-      <!-- First Tier Drop Down -->
-      <label for="drop-2" class="toggle">Portfolio +</label>
-      <a href="#">Portfolio</a>
-      <input type="checkbox" id="drop-2"/>
-      <ul>
-        <li><a href="#">Portfolio 1</a></li>
-        <li><a href="#">Portfolio 2</a></li>
-        <li> 
-          
-          <!-- Second Tier Drop Down -->
-          <label for="drop-3" class="toggle">Works +</label>
-          <a href="#">Works</a>
-          <input type="checkbox" id="drop-3"/>
-          <ul>
-            <li><a href="#">HTML/CSS</a></li>
-            <li><a href="#">jQuery</a></li>
-            <li><a href="#">Python</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About Us</a></li>
     <li><a href="#">Blog</a></li>
     <li><a href="#">Submit</a></li>
     <li><a href="#">Contact</a></li>
     <li><a href="#">About</a></li>
   </ul>
 </nav>
-<h1> Mobile-compatible Responsive Dropdown Menu Demo </h1>
-<div class="css-script-ads"><script type="text/javascript"><!--
-google_ad_client = "ca-pub-2783044520727903";
-/* CSSScript Demo Page */
-google_ad_slot = "3025259193";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script> 
-      <script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
