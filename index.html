@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+<link rel="stylesheet" href="index.css">
 <title>Mobile-compatible Responsive Dropdown Menu Demo</title>
 <style>
 @import url(http://fonts.googleapis.com/css?family=roboto);
@@ -389,32 +397,64 @@ hr {
 
 </style>
 </head>
+	<body>
+  		<div class="wrapper">
+		
+			  <div class="top">
+				  <img id="topimg" src="http://www.servicenerd.com/uploads/4/5/1/6/45160455/1445959109.jpg" style="width: 100%; height: auto;">
+			  </div>	
+			
+      <nav>
+        <div id="logo">Demo Page</div>
+        <label for="drop" class="toggle">Menu</label>
+        <input type="checkbox" id="drop" />
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Submit</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+      </nav>
+      
+      <div>
+			
 
-<body>
-<nav>
-  <div id="logo">Demo Page</div>
-  <label for="drop" class="toggle">Menu</label>
-  <input type="checkbox" id="drop" />
-  <ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Submit</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">About</a></li>
-  </ul>
-</nav>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function() {
+			checkSize();
+			
+			$(window).resize(checkSize);
+		})
+		
+		function checkSize() {
+			if($(".wrapper").css("height") != "1000px"){
+				var num=500;
+		
+				$(window).bind('scroll', function() {
+					if($(window).scrollTop() > num) {
+						$('.menuwrap').addClass('fixed');
+					} else {
+						$('.menuwrap').removeClass('fixed');
+					}
+				});
+			}
+		};	
+		</script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-46156385-1', 'cssscript.com');
-  ga('send', 'pageview');
+    ga('create', 'UA-46156385-1', 'cssscript.com');
+    ga('send', 'pageview');
 
-</script>
+  </script>
 </body>
 </html>
